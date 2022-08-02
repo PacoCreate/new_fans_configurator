@@ -12,7 +12,7 @@ const FanCard = () => {
       if (eachFolder.active === true) {
         return (
           <li key={eachFolder.id}>
-            <Link to={`/${eachFolder.folder}`}>
+            <Link to={`/serie/${eachFolder.folder}`}>
               <img src={getImgUrl} alt={eachFolder.name.charAt(0) + eachFolder.name.slice(1).toLowerCase()} />
             </Link>
           </li>

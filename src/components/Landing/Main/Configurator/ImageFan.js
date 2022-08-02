@@ -12,7 +12,6 @@ const getImgUrl = () => {
   //get motor color
   const baseFanURL = `https://www.create-store.com/img/core/ikh/configurator/fans/data/series/${folder}.json`;
 
-  console.log(baseFanURL);
   const getImgUrl = `${baseURL}/${folder}/style.jpg`;
   return <img className="c-configurator__image-picture-img" src={getImgUrl} />;
 };
@@ -40,7 +39,7 @@ const ImageFan = () => {
     //     setPruebaData(data)
     //   });
     const data = require(`/src/data/series/${folder}.json`);
-    console.log(data);
+     console.log(data);
     setPruebaData(data);
   }, []);
   return (
