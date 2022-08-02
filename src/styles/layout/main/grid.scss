@@ -1,0 +1,23 @@
+.c-styles {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+@include tablet {
+  .c-styles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+}
+@include desktop {
+  .c-styles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+}
