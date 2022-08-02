@@ -1,0 +1,29 @@
+.c-fannavigation {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  &__item {
+    margin: 0 12px;
+    white-space: nowrap;
+    &--active {
+      font-weight: 700;
+    }
+    &--inactive {
+      color: #bcbcbc;
+    }
+  }
+  @include tablet {
+    justify-content: space-between;
+  }
+}
+.u-list-numeric {
+  list-style: auto;
+}

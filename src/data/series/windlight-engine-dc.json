@@ -1,0 +1,41 @@
+{
+  "name": "WINDLIGHT ENGINE DC Serie",
+  "fans": [
+    {
+      "isActive": "Proximo cambio",
+      "serieName": "WINDLIGHT ENGINE DC",
+      "active": 200215,
+      "id": 100891,
+      "idc": 200215,
+      "idcwifi": null,
+      "summer-winter": true,
+      "style": 18,
+      "motor": 3,
+      "blades": 12,
+      "light": 2,
+      "withlight": true,
+      "upgradeable": false,
+      "wifi": false,
+      "multimedia": null,
+      "img": null
+    },
+    {
+      "isActive": "Proximo cambio",
+      "serieName": "WINDLIGHT ENGINE DC",
+      "active": "NO active",
+      "id": 112390,
+      "idc": 227183,
+      "idcwifi": null,
+      "summer-winter": true,
+      "style": 18,
+      "motor": 3,
+      "blades": 12,
+      "light": 2,
+      "withlight": true,
+      "upgradeable": false,
+      "wifi": false,
+      "multimedia": null,
+      "img": null
+    }
+  ]
+}
