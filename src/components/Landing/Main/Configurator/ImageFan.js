@@ -39,7 +39,7 @@ const ImageFan = () => {
     //     setPruebaData(data)
     //   });
     const data = require(`/src/data/series/${folder}.json`);
-     console.log(data);
+
     setPruebaData(data);
   }, []);
   return (

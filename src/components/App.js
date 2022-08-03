@@ -35,12 +35,10 @@ const App = () => {
   const { pathname } = useLocation();
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
   const routeData = matchPath("/serie/:fanName", pathname);
-   // Si no coincide, routeData es null
+  // Si no coincide, routeData es null
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
-  const productId = routeData !== null ? routeData.params.fanName : '';
-  console.log(routeData);
-
+  const productId = routeData !== null ? routeData.params.fanName : "";
 
   return (
     <>

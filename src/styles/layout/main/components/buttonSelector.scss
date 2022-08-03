@@ -1,15 +1,65 @@
 .c-configurator__selector-colors-color {
-    width: 70px;
-    height: 40px;
-    border-radius: 25px;
-    margin: 8px;
-    cursor: pointer;
-    position: relative;
-    padding: 6px;
-    transition: all .15s ease-in-out;
-    background-position: 50%;
-    border: 1px solid #bebebe;}
-.c-configurator__selector-colors-color--nickel {
+  width: 70px;
+  height: 40px;
+  border-radius: 25px;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+  padding: 6px;
+  transition: all 0.15s ease-in-out;
+  background-position: 50%;
+  border: 1px solid #bebebe;
+  &--nickel {
     background-color: #cacaca;
     background-image: $nickel-bg;
+  }
+  &--black {
+    background-color: #000;
+  }
+
+  &--white {
+    background-color: #fff;
+    border: 1px solid #bebebe;
+  }
+
+  &--nickel {
+    background-color: #cacaca;
+    background-image: $nickel-bg;
+  }
+
+  &--grey {
+    background-color: rgb(85, 85, 85);
+  }
+
+  &--wood-light {
+    background-color: #ffc368;
+    background-image: $wood-light-bg;
+  }
+
+  &--wood-dark {
+    background-color: #572700;
+    background-image: $wood-dark-bg;
+  }
+  &--gold {
+    background-color: #967a00;
+    background-image: $gold-bg;
+  }
+  &--pink {
+    background-color: #fcd7d1;
+  }
+  &--green {
+    background-color: #e3e5cf;
+  }
+  &--yellow {
+    background-color: #ffe9c3;
+  }
+  &--blue {
+    background-color: #d1edfa;
+  }
+  &--transparent {
+    background-color: transparent;
+  }
+  &--palm {
+    background-color: #e0c896;
+  }
 }
