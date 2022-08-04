@@ -7,14 +7,12 @@ const ImageFan = (props) => {
     const folder = window.location.href.split("/").pop();
 
     //get motor color
-    const baseImg = `${baseURL}/${folder}/style.jpg`;
+
 
     //url personalizada
     const imgUrl = `${baseURL}/${folder}/${props.selectedMaterial}/fan.jpg`;
-    // const getImgUrl = `${baseURL}/${folder}/style.jpg`;
-    if (props.selectedMaterial === "") {
-      return <img className="c-configurator__image-picture-img" alt="fan" src={baseImg} />;
-    }
+
+    
     return <img className="c-configurator__image-picture-img" alt="fan" src={imgUrl} />;
   };
 
