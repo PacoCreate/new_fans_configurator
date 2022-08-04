@@ -1,11 +1,7 @@
 import ButtonSelectorType from "./ButtonSelector/ButtonSelectorType";
 
 const ListOfMaterials = (props) => {
-  
 
-
-
-  //EVENTOS
 
   const nameFolder = window.location.href.split("/").pop();
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
@@ -14,7 +10,6 @@ const ListOfMaterials = (props) => {
     let availableMotors = [];
     const getEachColor = fanArr.map((eachColorMotor) => {
       let allColors = eachColorMotor.motor;
-      //   console.log(allColors, idc);
       return allColors;
     });
     availableMotors.push(getEachColor);
@@ -28,7 +23,7 @@ const ListOfMaterials = (props) => {
 
   const renderButtons = (infoAboutButtons) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
-      return <ButtonSelectorType  updateMaterial={props.updateMaterial} eachColorButton={eachButton} />;
+      return <ButtonSelectorType updateMaterial={props.updateMaterial} eachColorButton={eachButton} />;
     });
   };
   return <ul className="c-configurator__selector-colors u-list-unstyled">{renderButtons(getInfoMotor())}</ul>;

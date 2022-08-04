@@ -5,8 +5,12 @@ import ImageFan from "./ImageFan";
 import { useState } from "react";
 
 const Configurator = (props) => {
+  //VARIABLES ¿¿
+  const nameFolder = window.location.href.split("/").pop();
+  const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
+  let initImg = fanArr[0].motor;
   //ESTADOS
-  const [selectedMaterial, setSelectedMaterial] = useState("");
+  const [selectedMaterial, setSelectedMaterial] = useState(initImg);
 
   // Creamos la función updateMaterial que le vamos a pasar a la hija ListOfMaterials y ButtonSelectorType
   // El componente ButtonSelectorType ejecutará esta función cuando la usuaria pulse el material escogido
@@ -15,6 +19,7 @@ const Configurator = (props) => {
     // En esta función guardamos el material en el estado
     setSelectedMaterial(material);
   };
+
   return (
     <div>
       <BackButtons />
