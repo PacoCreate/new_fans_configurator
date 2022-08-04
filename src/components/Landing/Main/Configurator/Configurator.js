@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Configurator = (props) => {
   //ESTADOS
-  const [selectedMaterial, setSelectedMaterial] = useState("style.jpg");
+  const [selectedMaterial, setSelectedMaterial] = useState("");
 
   // Creamos la función updateMaterial que le vamos a pasar a la hija ListOfMaterials y ButtonSelectorType
   // El componente ButtonSelectorType ejecutará esta función cuando la usuaria pulse el material escogido

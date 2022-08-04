@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const allData = { globalData }.globalData.series;
 
 const ImageFan = (props) => {
+ 
   const getImgUrl = () => {
     //get base url
     const baseURL = "https://www.create-store.com/img/core/ikh/configurator/fans/images";
@@ -11,11 +12,13 @@ const ImageFan = (props) => {
     const folder = window.location.href.split("/").pop();
 
     //get motor color
-    const baseImg=  "https://www.create-store.com/img/core/ikh/configurator/fans/images/windcalm-dc/style.jpg/"
-    const getImgUrl = `${baseURL}/${folder}/${props.selectedMaterial}/fan.jpg`;
+    const baseImg =  `${baseURL}/${folder}/style.jpg`
+    const imgUrl = `${baseURL}/${folder}/${props.selectedMaterial}/fan.jpg`;
     // const getImgUrl = `${baseURL}/${folder}/style.jpg`;
-
-    return <img className="c-configurator__image-picture-img" src={getImgUrl} />;
+if (props.selectedMaterial === "") {  
+    return <img className="c-configurator__image-picture-img" src={baseImg} />;
+  }
+return  <img className="c-configurator__image-picture-img" src={imgUrl} />;
   };
 
 
