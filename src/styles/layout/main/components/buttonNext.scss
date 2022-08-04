@@ -1,0 +1,22 @@
+.c-configurator__selector-next{
+    color: #3b3b3b;
+    font-weight: 700;
+    min-width: 180px;
+    height: 60px;
+    border-radius: 40px;
+    border: none;
+    background: #e9e6e2;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 auto;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.c-configurator__selector-next svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-left: 4px;
+    height: 18px;
+}

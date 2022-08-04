@@ -26,6 +26,18 @@
     bottom: 0;
     transition: all 0.15s ease-in-out;
   }
+  .c-configurator__selector-colors{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding-bottom: 24px;
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
   .c-configurator__selector {
     padding-top: 32px;
     position: relative;

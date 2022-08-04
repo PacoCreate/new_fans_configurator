@@ -1,6 +1,8 @@
 import Steps from "./Steps";
 
 import ButtonSelectorType from "./ButtonSelector/ButtonSelectorType";
+import NextButton from "./NextButton/NextButton";
+
 
 const ConfiguratorSelector = () => {
   //ESTADOS
@@ -38,6 +40,8 @@ const ConfiguratorSelector = () => {
       <Steps />
 
       <ul className="c-configurator__selector-colors u-list-unstyled">{renderButtons()}</ul>
+   <NextButton></NextButton>
+
     </article>
   );
 };
