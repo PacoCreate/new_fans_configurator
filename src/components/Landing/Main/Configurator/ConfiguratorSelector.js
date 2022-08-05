@@ -8,7 +8,7 @@ const ConfiguratorSelector = (props) => {
     <article className="c-configurator__selector">
       <Steps />
       <ListOfMaterials updateMaterial={props.updateMaterial}/>
-      <NextButton />
+      <NextButton nextPath={props.nextPath}/>
     </article>
   );
 };

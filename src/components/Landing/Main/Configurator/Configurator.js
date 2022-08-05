@@ -23,10 +23,10 @@ const Configurator = (props) => {
   return (
     <div>
       <BackButtons />
-      <SectionNav numberStep="2" descriptionStep="Elige el color de motor" stepSelected={props.stepSelected} />
+      <SectionNav numberStep={props.numberStep} descriptionStep={props.descriptionStep} stepSelected={props.stepSelected} />
       <section className="c-configurator">
         <ImageFan selectedMotor={selectedMotor} />
-        <ConfiguratorSelector updateMaterial={updateMaterial} />
+        <ConfiguratorSelector nextPath={props.nextPath} updateMaterial={updateMaterial} />
       </section>
     </div>
   );

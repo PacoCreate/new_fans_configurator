@@ -42,8 +42,22 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/serie/:fanName" element={<Configurator />}></Route>
-        <Route path="/serie/:fanName/blades" element={<Configurator />}></Route>
+        <Route
+          path="/serie/:fanName"
+          element={<Configurator nextPath="blades" numberStep="2" descriptionStep="Elige el color de motor" />}
+        ></Route>
+        <Route
+          path="/serie/:fanName/blades"
+          element={<Configurator nextPath="light" numberStep="3" descriptionStep="Elige el color de las aspas" />}
+        ></Route>
+        <Route
+          path="/serie/:fanName/blades/light"
+          element={<Configurator nextPath="wifi" numberStep="4" descriptionStep="Elige las opciones de luz" />}
+        ></Route>
+        <Route
+          path="/serie/:fanName/blades/light/wifi"
+          element={<Configurator nextPath="" numberStep="5" descriptionStep="Selecciona con o sin WiFi y app" />}
+        ></Route>
         {/* Tenemos que crear a futuro algun componente para las rutas que no coincidan con nada, que en el nuevo router dom se hace con el asterisco 
         <Route path="*" element={<NoMatch />} /> */}
       </Routes>
