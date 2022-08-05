@@ -29,8 +29,6 @@ const Home = () => {
 };
 
 const App = () => {
-  // const [colorStepSelected, setcolorStepSelected] = useState("");
-
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
@@ -44,10 +42,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-
-        <Route path="/serie/:fanName" element={<Configurator />}>
-          {/* <Route path="/wifi" element ={<h1>hello world</h1>}></Route> */}
-        </Route>
+        <Route path="/serie/:fanName" element={<Configurator />}></Route>
+        <Route path="/serie/:fanName/blades" element={<Configurator />}></Route>
         {/* Tenemos que crear a futuro algun componente para las rutas que no coincidan con nada, que en el nuevo router dom se hace con el asterisco 
         <Route path="*" element={<NoMatch />} /> */}
       </Routes>

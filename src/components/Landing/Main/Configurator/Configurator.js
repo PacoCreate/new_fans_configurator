@@ -6,18 +6,18 @@ import { useState } from "react";
 
 const Configurator = (props) => {
   //VARIABLES ¿¿
-  const nameFolder = window.location.href.split("/").pop();
+  const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
   let initImg = fanArr[0].motor;
   //ESTADOS
-  const [selectedMaterial, setSelectedMaterial] = useState(initImg);
+  const [selectedMotor, setSelectedMotor] = useState(initImg);
 
   // Creamos la función updateMaterial que le vamos a pasar a la hija ListOfMaterials y ButtonSelectorType
   // El componente ButtonSelectorType ejecutará esta función cuando la usuaria pulse el material escogido
   const updateMaterial = (material) => {
     // Cuando ButtonSelectorType ejecute esta función nos pasará el material por parámetros
     // En esta función guardamos el material en el estado
-    setSelectedMaterial(material);
+    setSelectedMotor(material);
   };
 
   return (
@@ -25,7 +25,7 @@ const Configurator = (props) => {
       <BackButtons />
       <SectionNav numberStep="2" descriptionStep="Elige el color de motor" stepSelected={props.stepSelected} />
       <section className="c-configurator">
-        <ImageFan selectedMaterial={selectedMaterial} />
+        <ImageFan selectedMotor={selectedMotor} />
         <ConfiguratorSelector updateMaterial={updateMaterial} />
       </section>
     </div>
