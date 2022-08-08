@@ -11,7 +11,7 @@
       "summer-winter": true,
       "style": 24,
       "motor": "black",
-      "blades": 5,
+     "blades": "wood-light",
       "light": 2,
       "withlight": true,
       "upgradeable": false,

@@ -6,7 +6,7 @@ const ConfiguratorSelector = (props) => {
 
   return (
     <article className="c-configurator__selector">
-      <Steps />
+      <Steps textSelector={props.textSelector}/>
       <ListOfMaterials updateMaterial={props.updateMaterial}/>
       <NextButton nextPath={props.nextPath}/>
     </article>

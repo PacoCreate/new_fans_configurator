@@ -26,7 +26,7 @@ const Configurator = (props) => {
       <SectionNav numberStep={props.numberStep} descriptionStep={props.descriptionStep} stepSelected={props.stepSelected} />
       <section className="c-configurator">
         <ImageFan selectedMotor={selectedMotor} />
-        <ConfiguratorSelector nextPath={props.nextPath} updateMaterial={updateMaterial} />
+        <ConfiguratorSelector nextPath={props.nextPath} updateMaterial={updateMaterial} textSelector={props.textSelector}/>
       </section>
     </div>
   );

@@ -37,22 +37,22 @@ const App = () => {
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
   const productId = routeData !== null ? routeData.params.fanName : "";
-
+  console.log("productId", productId);
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/serie/:fanName"
-          element={<Configurator nextPath="blades" numberStep="2" descriptionStep="Elige el color de motor" />}
+          element={<Configurator nextPath="blades" numberStep="2" descriptionStep="Elige el color de motor" textSelector="Motores disponibles"/>}
         ></Route>
         <Route
           path="/serie/:fanName/blades"
-          element={<Configurator nextPath="light" numberStep="3" descriptionStep="Elige el color de las aspas" />}
+          element={<Configurator nextPath="light" numberStep="3" descriptionStep="Elige el color de las aspas" textSelector="Colores de aspas"/>}
         ></Route>
         <Route
           path="/serie/:fanName/blades/light"
-          element={<Configurator nextPath="wifi" numberStep="4" descriptionStep="Elige las opciones de luz" />}
+          element={<Configurator nextPath="wifi" numberStep="4" descriptionStep="Elige las opciones de luz" textSelector="Opciones de luz"/>}
         ></Route>
         <Route
           path="/serie/:fanName/blades/light/wifi"
