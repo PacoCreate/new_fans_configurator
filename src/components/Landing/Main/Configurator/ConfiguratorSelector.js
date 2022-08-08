@@ -4,10 +4,11 @@ import ListOfMaterials from "./ListOfMaterials";
 
 const ConfiguratorSelector = (props) => {
 
+
   return (
     <article className="c-configurator__selector">
       <Steps textSelector={props.textSelector}/>
-      <ListOfMaterials updateMaterial={props.updateMaterial}/>
+      <ListOfMaterials selectedMotor={props.selectedMotor} updateMaterial={props.updateMaterial}/>
       <NextButton nextPath={props.nextPath}/>
     </article>
   );

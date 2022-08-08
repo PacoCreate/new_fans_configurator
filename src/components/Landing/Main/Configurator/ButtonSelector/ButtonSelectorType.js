@@ -9,6 +9,7 @@ const ButtonSelectorType = (props) => {
 
   return (
     <li
+
       data-color-id={`${props.eachColorButton}`}
       className={`c-configurator__selector-colors-color  c-configurator__selector-colors-color--${props.eachColorButton}`}
       title={`${props.eachColorButton}`}

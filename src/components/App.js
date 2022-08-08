@@ -37,7 +37,7 @@ const App = () => {
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
   const productId = routeData !== null ? routeData.params.fanName : "";
-  console.log("productId", productId);
+  //console.log("productId", productId);
   return (
     <>
       <Routes>
