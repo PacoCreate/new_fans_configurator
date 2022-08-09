@@ -10,7 +10,6 @@ const Configurator = (props) => {
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
   let initImg = fanArr[0].motor;
 
-
   //ESTADOS
   const [selectedMotor, setSelectedMotor] = useState(initImg);
 
@@ -26,6 +25,8 @@ const Configurator = (props) => {
     <div>
       <BackButtons />
       <SectionNav
+      fan={props.fan}
+        bold={props.bold}
         numberStep={props.numberStep}
         descriptionStep={props.descriptionStep}
         stepSelected={props.stepSelected}
@@ -33,7 +34,7 @@ const Configurator = (props) => {
       <section className="c-configurator">
         <ImageFan selectedMotor={selectedMotor} />
         <ConfiguratorSelector
-        selectedMotor={selectedMotor}
+          selectedMotor={selectedMotor}
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
           textSelector={props.textSelector}

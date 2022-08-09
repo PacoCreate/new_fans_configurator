@@ -20,6 +20,14 @@
       color: #bcbcbc;
     }
   }
+  a {
+    color: #3b3b3b;
+  }
+  .c-fannavigation .is-active {
+    font-weight: 700;
+    pointer-events: none;
+    color: #3b3b3b;
+  }
   @include tablet {
     justify-content: space-between;
   }

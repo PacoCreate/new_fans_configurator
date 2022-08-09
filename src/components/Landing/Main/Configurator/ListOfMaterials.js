@@ -29,7 +29,7 @@ const ListOfMaterials = (props) => {
     let result = [...new Set(infoAboutButtons)];
     return result;
   };
-  // console.log(uniqueSelectors(getInfoBlades()));
+  console.log(getInfoMotor());
   const renderButtons = (infoAboutButtons) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
       return <ButtonSelectorType updateMaterial={props.updateMaterial} eachColorButton={eachButton} />;
