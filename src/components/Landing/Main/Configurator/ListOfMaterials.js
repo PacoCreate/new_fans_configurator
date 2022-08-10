@@ -25,7 +25,7 @@ const ListOfMaterials = (props) => {
   //   ;
   //   return availableBlades[0];
   // };
-  console.log("final", props);
+  console.log("final", props.getBubbles());
   const uniqueSelectors = (infoAboutButtons) => {
     let result = [...new Set(infoAboutButtons)];
     return result;

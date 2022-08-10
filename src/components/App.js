@@ -1,13 +1,9 @@
 import "../styles/App.scss";
-
+import getColorBubbles from "../services/getColorBubbles";
 import { Routes, Route, useLocation, matchPath } from "react-router-dom";
-
 import { useState } from "react";
-// import callToFans from "../services/callToFans";
+
 import Home from "./Landing/Main/Grid/Home";
-// import SectionNav from "./Landing/Header/Nav/SectionNav";
-// import Title from "./Landing/Header/Title";
-// import Main from "./Landing/Main/Grid/Main";
 import Configurator from "./Landing/Main/Configurator/Configurator";
 
 const App = () => {
@@ -16,6 +12,7 @@ const App = () => {
   const updateNameFan = (fan) => {
     setFan(fan);
   };
+  console.log({ getColorBubbles }.getColorBubbles);
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
@@ -26,53 +23,29 @@ const App = () => {
   const fanName = routeData !== null ? routeData.params.fanName : "";
 
   // const fanArr = require(`/src/data/series/${pathname}.json`).fans;
-;
-  //colores de motor
-  const getInfoMotor = () => {
-    let availableMotors = [];
-    const fanArr = require(`../data/series/${fan}.json`).fans;
-    // console.log("app", fanArr);
-    const getEachColor = fanArr.map((eachColorMotor) => {
-      let allColors = eachColorMotor.motor;
-      return allColors;
-    });
-    availableMotors.push(getEachColor);
-    return availableMotors[0];
-  };
- // colores de aspas
-  const getInfoBlades = () => {
-    let availableBlades = [];
-    const fanArr = require(`../data/series/windcalm-dc.json`).fans;
-    //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
-    const arrColorBlades = fanArr
-      .filter((fan) => fan.motor === fan.selectedMotor)
-      .map((fanBlades) => fanBlades.blades);
-    availableBlades.push(arrColorBlades);
-    ;
-    return availableBlades[0];
-  };
   //colores de motor
   // const getInfoMotor = () => {
   //   let availableMotors = [];
-  // const fanArr = require(`/src/data/series/${fan}.json`).fans;
-
+  //   const fanArr = require(`../data/series/${fan}.json`).fans;
+  //   // console.log("app", fanArr);
   //   const getEachColor = fanArr.map((eachColorMotor) => {
   //     let allColors = eachColorMotor.motor;
   //     return allColors;
   //   });
   //   availableMotors.push(getEachColor);
-  //   return <p>glrfmde</p>;
+  //   return availableMotors[0];
   // };
 
-  // // colores de aspas
+  //  colores de aspas
   // const getInfoBlades = () => {
   //   let availableBlades = [];
+  //   const fanArr = require(`../data/series/windcalm-dc.json`).fans;
   //   //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
   //   const arrColorBlades = fanArr
   //     .filter((fan) => fan.motor === fan.selectedMotor)
   //     .map((fanBlades) => fanBlades.blades);
   //   availableBlades.push(arrColorBlades);
-  //   ;
+
   //   return availableBlades[0];
   // };
 
@@ -89,7 +62,7 @@ const App = () => {
               numberStep="2"
               descriptionStep="Elige el color de motor"
               textSelector="Motores disponibles"
-               getBubbles={getInfoMotor}
+              //  getBubbles={getInfoMotor}
             />
           }
         ></Route>
@@ -102,7 +75,7 @@ const App = () => {
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"
-              getBubbles={getInfoBlades}
+              //  getBubbles={getInfoBlades}
             />
           }
         ></Route>
