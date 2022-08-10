@@ -7,8 +7,7 @@ import { useState } from "react";
 const Configurator = (props) => {
   //cambio de rutas
   // const location = useLocation();
-
-
+  console.log("configurator", props);
 
   //VARIABLES ¿¿
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
@@ -34,7 +33,6 @@ const Configurator = (props) => {
         bold={props.bold}
         numberStep={props.numberStep}
         descriptionStep={props.descriptionStep}
- 
       />
       <section className="c-configurator">
         <ImageFan fan={props.fan} selectedMotor={selectedMotor} />
@@ -44,6 +42,7 @@ const Configurator = (props) => {
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
           textSelector={props.textSelector}
+          getBubbles={props.getBubbles}
         />
       </section>
     </div>

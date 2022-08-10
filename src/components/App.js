@@ -18,14 +18,64 @@ const App = () => {
   };
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
-
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
   const routeData = matchPath("/serie/:fanName", pathname);
   // Si no coincide, routeData es null
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
   const fanName = routeData !== null ? routeData.params.fanName : "";
-  //console.log("productId", productId);
+
+  // const fanArr = require(`/src/data/series/${pathname}.json`).fans;
+;
+  //colores de motor
+  const getInfoMotor = () => {
+    let availableMotors = [];
+    const fanArr = require(`../data/series/${fan}.json`).fans;
+    // console.log("app", fanArr);
+    const getEachColor = fanArr.map((eachColorMotor) => {
+      let allColors = eachColorMotor.motor;
+      return allColors;
+    });
+    availableMotors.push(getEachColor);
+    return availableMotors[0];
+  };
+ // colores de aspas
+  const getInfoBlades = () => {
+    let availableBlades = [];
+    const fanArr = require(`../data/series/windcalm-dc.json`).fans;
+    //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
+    const arrColorBlades = fanArr
+      .filter((fan) => fan.motor === fan.selectedMotor)
+      .map((fanBlades) => fanBlades.blades);
+    availableBlades.push(arrColorBlades);
+    ;
+    return availableBlades[0];
+  };
+  //colores de motor
+  // const getInfoMotor = () => {
+  //   let availableMotors = [];
+  // const fanArr = require(`/src/data/series/${fan}.json`).fans;
+
+  //   const getEachColor = fanArr.map((eachColorMotor) => {
+  //     let allColors = eachColorMotor.motor;
+  //     return allColors;
+  //   });
+  //   availableMotors.push(getEachColor);
+  //   return <p>glrfmde</p>;
+  // };
+
+  // // colores de aspas
+  // const getInfoBlades = () => {
+  //   let availableBlades = [];
+  //   //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
+  //   const arrColorBlades = fanArr
+  //     .filter((fan) => fan.motor === fan.selectedMotor)
+  //     .map((fanBlades) => fanBlades.blades);
+  //   availableBlades.push(arrColorBlades);
+  //   ;
+  //   return availableBlades[0];
+  // };
+
   return (
     <>
       <Routes>
@@ -39,6 +89,7 @@ const App = () => {
               numberStep="2"
               descriptionStep="Elige el color de motor"
               textSelector="Motores disponibles"
+               getBubbles={getInfoMotor}
             />
           }
         ></Route>
@@ -51,6 +102,7 @@ const App = () => {
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"
+              getBubbles={getInfoBlades}
             />
           }
         ></Route>
