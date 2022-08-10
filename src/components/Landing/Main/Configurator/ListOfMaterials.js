@@ -3,7 +3,7 @@ import ButtonSelectorType from "./ButtonSelector/ButtonSelectorType";
 const ListOfMaterials = (props) => {
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
-
+  console.log(props);
   //colores de motor
   const getInfoMotor = () => {
     let availableMotors = [];
@@ -29,7 +29,7 @@ const ListOfMaterials = (props) => {
     let result = [...new Set(infoAboutButtons)];
     return result;
   };
-  console.log(getInfoMotor());
+  // console.log(getInfoMotor());
   const renderButtons = (infoAboutButtons) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
       return <ButtonSelectorType updateMaterial={props.updateMaterial} eachColorButton={eachButton} />;

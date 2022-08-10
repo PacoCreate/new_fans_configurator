@@ -12,11 +12,13 @@ import Configurator from "./Landing/Main/Configurator/Configurator";
 
 const App = () => {
   const [fan, setFan] = useState("");
+  // const [positionStep, setPositionStep] = useState("")
   const updateNameFan = (fan) => {
     setFan(fan);
   };
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
+
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
   const routeData = matchPath("/serie/:fanName", pathname);
   // Si no coincide, routeData es null
@@ -32,7 +34,7 @@ const App = () => {
           path="/serie/:fanName"
           element={
             <Configurator
-            fan={fan}
+              fan={fan}
               nextPath="motor"
               numberStep="2"
               descriptionStep="Elige el color de motor"
@@ -44,7 +46,7 @@ const App = () => {
           path="/serie/:fanName/motor"
           element={
             <Configurator
-                  fan={fan}
+              fan={fan}
               nextPath="blades"
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
@@ -56,8 +58,8 @@ const App = () => {
           path="/serie/:fanName/motor/blades"
           element={
             <Configurator
-                  fan={fan}
-              nextPath="wifi"
+              fan={fan}
+              nextPath="light"
               numberStep="4"
               descriptionStep="Elige las opciones de luz"
               textSelector="Opciones de luz"
@@ -68,14 +70,14 @@ const App = () => {
           path="/serie/:fanName/motor/blades/light"
           element={
             <Configurator
-                  fan={fan}
-              nextPath="/serie/:fanName/motor/blades"
+              fan={fan}
+              nextPath="/serie/:fanName/motor/blades/light"
               numberStep="5"
               descriptionStep="Selecciona con o sin WiFi y app"
             />
           }
         ></Route>
-        {/* Tenemos que crear a futuro algun componente para las rutas que no coincidan con nada, que en el nuevo router dom se hace con el asterisco 
+        {/* Tenemos que crear a futuro algun componente para las rutas que no coincidan con nada, en el nuevo router dom se hace con el asterisco 
         <Route path="*" element={<NoMatch />} /> */}
       </Routes>
     </>

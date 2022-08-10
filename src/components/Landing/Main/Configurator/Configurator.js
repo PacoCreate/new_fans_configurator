@@ -5,6 +5,11 @@ import ImageFan from "./ImageFan";
 import { useState } from "react";
 
 const Configurator = (props) => {
+  //cambio de rutas
+  // const location = useLocation();
+
+
+
   //VARIABLES ¿¿
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
@@ -25,15 +30,16 @@ const Configurator = (props) => {
     <div>
       <BackButtons />
       <SectionNav
-      fan={props.fan}
+        fan={props.fan}
         bold={props.bold}
         numberStep={props.numberStep}
         descriptionStep={props.descriptionStep}
-        stepSelected={props.stepSelected}
+ 
       />
       <section className="c-configurator">
-        <ImageFan selectedMotor={selectedMotor} />
+        <ImageFan fan={props.fan} selectedMotor={selectedMotor} />
         <ConfiguratorSelector
+          fan={props.fan}
           selectedMotor={selectedMotor}
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
