@@ -1,5 +1,5 @@
 import "../styles/App.scss";
-import getColorBubbles from "../services/getColorBubbles";
+// import getColorBubbles from "../services/getColorBubbles";
 import { Routes, Route, useLocation, matchPath } from "react-router-dom";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ const App = () => {
   const updateNameFan = (fan) => {
     setFan(fan);
   };
-  console.log({ getColorBubbles }.getColorBubbles);
+  // console.log({ getColorBubbles }.getColorBubbles);
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName

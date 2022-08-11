@@ -1,5 +1,3 @@
-import { findAllByRole } from "@testing-library/react";
-
 const fanArr = require(`../data/series/windcalm-dc.json`).fans;
 const getInfoMotor = () => {
   let availableMotors = [];
@@ -13,13 +11,13 @@ const getInfoMotor = () => {
   return availableMotors[0];
 };
 //  colores de aspas
-const getInfoBlades = () => {
+const getInfoBlades = (chosenMotor) => {
   let availableBlades = [];
-  console.log("service", fanArr);
+  // console.log("service", props);
   //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
   const arrColorBlades = fanArr
-    // aqui esta el fallo, no sabe que es fan.selectedMotor
-    .filter((fan) => fan.motor === fan.selectedMotor)
+
+    .filter((fan) => fan.motor === chosenMotor)
     .map((fanBlades) => fanBlades.blades);
   availableBlades.push(arrColorBlades);
 
@@ -27,8 +25,9 @@ const getInfoBlades = () => {
 };
 
 const getColorBubbles = {
+
   infoMotor: getInfoMotor(),
-  infoBlades: getInfoBlades(),
+   infoBlades: getInfoBlades(),
 };
 
 export default getColorBubbles;

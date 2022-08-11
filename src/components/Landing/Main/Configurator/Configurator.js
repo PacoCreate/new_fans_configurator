@@ -1,13 +1,12 @@
 import SectionNav from "../../Header/Nav/SectionNav";
 import BackButtons from "./BackButton/BackButtons";
 import ConfiguratorSelector from "./ConfiguratorSelector";
+
 import ImageFan from "./ImageFan";
 import { useState } from "react";
 
 const Configurator = (props) => {
-  //cambio de rutas
-  // const location = useLocation();
-  console.log("configurator", props);
+
 
   //VARIABLES ¿¿
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
