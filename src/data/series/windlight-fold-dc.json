@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT FOLD DC",
-      "active": "NO active",
+      "active": false,
       "id": 112376,
       "idc": 227142,
       "idcwifi": null,
@@ -77,7 +77,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT FOLD DC",
-      "active": "NO active",
+      "active": false,
       "id": 112376,
       "idc": 227133,
       "idcwifi": null,
@@ -95,7 +95,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT FOLD DC",
-      "active": "NO active",
+      "active": false,
       "id": 112376,
       "idc": 227135,
       "idcwifi": null,

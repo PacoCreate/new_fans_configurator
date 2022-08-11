@@ -40,7 +40,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT BOWL DC",
-      "active": "NO active",
+      "active": false,
       "id": 112405,
       "idc": 227217,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT BOWL DC",
-      "active": "NO active",
+      "active": false,
       "id": 112405,
       "idc": 227219,
       "idcwifi": null,

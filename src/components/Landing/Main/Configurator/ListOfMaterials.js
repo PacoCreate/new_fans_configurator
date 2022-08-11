@@ -8,9 +8,11 @@ const ListOfMaterials = (props) => {
   const getInfoMotor = () => {
     let availableMotors = [];
     const getEachColor = fanArr.map((eachColorMotor) => {
+      console.log(eachColorMotor);
       return eachColorMotor.motor;
     });
     getEachColor.map((eachColor) => {
+      
       if (eachColor !== null) {
         availableMotors.push(eachColor);
       }

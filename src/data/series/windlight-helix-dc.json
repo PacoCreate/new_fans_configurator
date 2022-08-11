@@ -40,7 +40,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HELIX DC",
-      "active": "NO active",
+      "active": false,
       "id": 112410,
       "idc": 227225,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HELIX DC",
-      "active": "NO active",
+      "active": false,
       "id": 112410,
       "idc": 227231,
       "idcwifi": null,

@@ -22,7 +22,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT ENGINE DC",
-      "active": "NO active",
+      "active": false,
       "id": 112390,
       "idc": 227183,
       "idcwifi": null,

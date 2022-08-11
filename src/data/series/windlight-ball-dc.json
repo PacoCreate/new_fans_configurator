@@ -40,7 +40,7 @@
     {
       "isActive": null,
       "serieName": "WINDLIGHT BALL DC",
-      "active": "NO active",
+      "active": false,
       "id": 111830,
       "idc": 225538,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": null,
       "serieName": "WINDLIGHT BALL DC",
-      "active": "NO active",
+      "active": false,
       "id": 111830,
       "idc": 225545,
       "idcwifi": 225545,

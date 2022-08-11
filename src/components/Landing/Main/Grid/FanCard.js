@@ -13,7 +13,6 @@ const FanCard = (props) => {
   const renderImg = () => {
     return dataFans.map((eachFolder) => {
       const getImgUrl = `https://www.create-store.com/img/core/ikh/configurator/fans/images/${eachFolder.folder}/style.jpg?v=0.18084083997869005`;
-
       if (eachFolder.active === true) {
         return (
           <li key={eachFolder.id} onClick={handleFan}>

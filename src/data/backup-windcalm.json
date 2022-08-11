@@ -580,7 +580,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218123,
         "idcwifi": 218123,
@@ -598,7 +598,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218099,
         "idcwifi": null,
@@ -616,7 +616,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218109,
         "idcwifi": 218109,
@@ -634,7 +634,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218088,
         "idcwifi": null,
@@ -652,7 +652,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218011,
         "idcwifi": null,
@@ -670,7 +670,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218017,
         "idcwifi": 218017,
@@ -688,7 +688,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218008,
         "idcwifi": null,
@@ -706,7 +706,7 @@
       {
         "isActive": null,
         "serieName": "WINDCALM DC",
-        "active": "NO active",
+        "active": false,
         "id": 82468,
         "idc": 218024,
         "idcwifi": 218024,

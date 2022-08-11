@@ -40,7 +40,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT MINIMAL DC",
-      "active": "NO active",
+      "active": false,
       "id": 112417,
       "idc": 227238,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT MINIMAL DC",
-      "active": "NO active",
+      "active": false,
       "id": 112417,
       "idc": 227233,
       "idcwifi": null,

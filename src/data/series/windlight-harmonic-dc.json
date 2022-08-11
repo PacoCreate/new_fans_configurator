@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HARMONIC DC",
-      "active": "NO active",
+      "active": false,
       "id": 112377,
       "idc": 227169,
       "idcwifi": null,
@@ -76,7 +76,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HARMONIC DC",
-      "active": "NO active",
+      "active": false,
       "id": 112377,
       "idc": 227170,
       "idcwifi": null,
@@ -94,7 +94,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HARMONIC DC",
-      "active": "NO active",
+      "active": false,
       "id": 112377,
       "idc": 227177,
       "idcwifi": null,

@@ -23,7 +23,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT HELM DC",
-      "active": "NO active",
+      "active": false,
       "id": 112418,
       "idc": 227240,
       "idcwifi": null,

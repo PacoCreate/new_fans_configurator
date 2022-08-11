@@ -40,7 +40,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT ROUND DC",
-      "active": "NO active",
+      "active": false,
       "id": 112403,
       "idc": 227210,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": "Proximo cambio",
       "serieName": "WINDLIGHT ROUND DC",
-      "active": "NO active",
+      "active": false,
       "id": 112403,
       "idc": 227211,
       "idcwifi": null,

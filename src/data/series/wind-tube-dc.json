@@ -40,7 +40,7 @@
     {
       "isActive": null,
       "serieName": "WIND TUBE DC",
-      "active": "NO active",
+      "active": false,
       "id": 111824,
       "idc": 225532,
       "idcwifi": null,
@@ -58,7 +58,7 @@
     {
       "isActive": null,
       "serieName": "WIND TUBE DC",
-      "active": "NO active",
+      "active": false,
       "id": 111824,
       "idc": 225530,
       "idcwifi": 225530,
