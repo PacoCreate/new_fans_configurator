@@ -6,19 +6,14 @@ const ListOfMaterials = (props) => {
 
   //colores de motor
   const getInfoMotor = () => {
-    let availableMotors = [];
-    const getEachColor = fanArr.map((eachColorMotor) => {
-      console.log(eachColorMotor);
-      return eachColorMotor.motor;
-    });
-    getEachColor.map((eachColor) => {
-      
-      if (eachColor !== null) {
-        availableMotors.push(eachColor);
+    let availableMotor = [];
+    fanArr.map((eachColorMotor) => {
+      if (eachColorMotor.active !== false && !availableMotor.includes(eachColorMotor.motor)) {
+        availableMotor.push(eachColorMotor.motor);
       }
-    });
+    });  
 
-    return availableMotors;
+      return availableMotor;
   };
 
   // colores de aspas
