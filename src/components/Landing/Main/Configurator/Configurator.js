@@ -41,7 +41,7 @@ const Configurator = (props) => {
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
           textSelector={props.textSelector}
-          getBubbles={props.getBubbles}
+          getInfoBubbles={props.getInfoBubbles}
         />
       </section>
     </div>

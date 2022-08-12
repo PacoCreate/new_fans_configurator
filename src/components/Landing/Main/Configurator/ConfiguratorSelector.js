@@ -12,7 +12,7 @@ const [stepSelected, setStepSelected] = useState("")
         fan={props.fan}
         selectedMotor={props.selectedMotor}
         updateMaterial={props.updateMaterial}
-        getBubbles={props.getBubbles}
+        getInfoBubbles={props.getInfoBubbles}
       />
       <NextButton nextPath={props.nextPath} />
     </article>

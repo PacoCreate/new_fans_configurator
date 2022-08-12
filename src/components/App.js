@@ -1,5 +1,5 @@
 import "../styles/App.scss";
-// import getColorBubbles from "../services/getColorBubbles";
+import {getInfoBlades, getInfoMotor} from "../services/getColorBubbles";
 import { Routes, Route, useLocation, matchPath } from "react-router-dom";
 import { useState } from "react";
 
@@ -8,7 +8,6 @@ import Configurator from "./Landing/Main/Configurator/Configurator";
 
 const App = () => {
   const [fan, setFan] = useState("");
-  // const [positionStep, setPositionStep] = useState("")
   const updateNameFan = (fan) => {
     setFan(fan);
   };
@@ -21,33 +20,6 @@ const App = () => {
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
   const fanName = routeData !== null ? routeData.params.fanName : "";
-
-  // const fanArr = require(`/src/data/series/${pathname}.json`).fans;
-  //colores de motor
-  // const getInfoMotor = () => {
-  //   let availableMotors = [];
-  //   const fanArr = require(`../data/series/${fan}.json`).fans;
-  //   // console.log("app", fanArr);
-  //   const getEachColor = fanArr.map((eachColorMotor) => {
-  //     let allColors = eachColorMotor.motor;
-  //     return allColors;
-  //   });
-  //   availableMotors.push(getEachColor);
-  //   return availableMotors[0];
-  // };
-
-  //  colores de aspas
-  // const getInfoBlades = () => {
-  //   let availableBlades = [];
-  //   const fanArr = require(`../data/series/windcalm-dc.json`).fans;
-  //   //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
-  //   const arrColorBlades = fanArr
-  //     .filter((fan) => fan.motor === fan.selectedMotor)
-  //     .map((fanBlades) => fanBlades.blades);
-  //   availableBlades.push(arrColorBlades);
-
-  //   return availableBlades[0];
-  // };
 
   return (
     <>
@@ -62,7 +34,7 @@ const App = () => {
               numberStep="2"
               descriptionStep="Elige el color de motor"
               textSelector="Motores disponibles"
-              //  getBubbles={getInfoMotor}
+              getInfoBubbles={getInfoMotor}
             />
           }
         ></Route>
@@ -75,7 +47,7 @@ const App = () => {
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"
-              //  getBubbles={getInfoBlades}
+              getInfoBubbles={getInfoBlades}
             />
           }
         ></Route>
