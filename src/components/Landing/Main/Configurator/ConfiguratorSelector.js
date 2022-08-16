@@ -1,20 +1,18 @@
 import Steps from "./Steps";
 import NextButton from "./NextButton/NextButton";
 import ListOfMaterials from "./ListOfMaterials";
-import { useState } from "react";
 
 const ConfiguratorSelector = (props) => {
-const [stepSelected, setStepSelected] = useState("")
   return (
     <article className="c-configurator__selector">
       <Steps textSelector={props.textSelector} />
       <ListOfMaterials
         fan={props.fan}
+        updateMotor={props.updateMotor}
         selectedMotor={props.selectedMotor}
-        updateMaterial={props.updateMaterial}
         getInfoBubbles={props.getInfoBubbles}
       />
-      <NextButton nextPath={props.nextPath} />
+      <NextButton motor={props.motor} nextPath={props.nextPath} />
     </article>
   );
 };

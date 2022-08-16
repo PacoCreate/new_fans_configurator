@@ -1,6 +1,6 @@
 import "../styles/App.scss";
-import {getInfoBlades, getInfoMotor} from "../services/getColorBubbles";
-import { Routes, Route, useLocation, matchPath } from "react-router-dom";
+import { getInfoBlades, getInfoMotor } from "../services/getColorBubbles";
+import { Routes, Route, useLocation, matchPath, useParams } from "react-router-dom";
 import { useState } from "react";
 
 import Home from "./Landing/Main/Grid/Home";
@@ -8,14 +8,22 @@ import Configurator from "./Landing/Main/Configurator/Configurator";
 
 const App = () => {
   const [fan, setFan] = useState("");
+  const [motor, setMotor] = useState("");
+  const [blades, setBlades] = useState("")
   const updateNameFan = (fan) => {
     setFan(fan);
   };
-  // console.log({ getColorBubbles }.getColorBubbles);
+const updateMotor = (color) =>  {
+  setMotor (color)
+}
+const updateBlades = (material) =>  {
+  setBlades (material)
+}
   // Con el hook useLocation primero obtengo la ruta actual
   const { pathname } = useLocation();
   // Con el matchPath compruebo si la ruta actual coincide con /serie/:fanName
   const routeData = matchPath("/serie/:fanName", pathname);
+
   // Si no coincide, routeData es null
   // Si sí coincide, routeData es un objeto con mucha información útil
   // La información que me interesa está en routeData.params.productId
@@ -26,24 +34,31 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home updateNameFan={updateNameFan} />}></Route>
         <Route
+          exact
           path="/serie/:fanName"
           element={
             <Configurator
               fan={fan}
-              nextPath="motor"
+              motor={motor}
+              nextPath={`motor/${motor}`}
               numberStep="2"
               descriptionStep="Elige el color de motor"
               textSelector="Motores disponibles"
               getInfoBubbles={getInfoMotor}
+              updateMotor={updateMotor}
             />
           }
         ></Route>
         <Route
-          path="/serie/:fanName/motor"
+          exact
+          path="/serie/:fanName/motor/:colormotor"
           element={
             <Configurator
+            updateMotor={updateMotor}
+            updateBlades={updateBlades}
               fan={fan}
-              nextPath="blades"
+              motor={motor}
+              nextPath={`blades/${motor}`}
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"
@@ -52,10 +67,13 @@ const App = () => {
           }
         ></Route>
         <Route
-          path="/serie/:fanName/motor/blades"
+          path="/serie/:fanName/motor/:colormotor/blades"
           element={
             <Configurator
+            updateMotor={updateMotor}
+            updateBlades={updateBlades}
               fan={fan}
+              motor={motor}
               nextPath="light"
               numberStep="4"
               descriptionStep="Elige las opciones de luz"
@@ -64,10 +82,12 @@ const App = () => {
           }
         ></Route>
         <Route
+         updateMotor={updateMotor}
           path="/serie/:fanName/motor/blades/light"
           element={
             <Configurator
               fan={fan}
+              motor={motor}
               nextPath="/serie/:fanName/motor/blades/light"
               numberStep="5"
               descriptionStep="Selecciona con o sin WiFi y app"
