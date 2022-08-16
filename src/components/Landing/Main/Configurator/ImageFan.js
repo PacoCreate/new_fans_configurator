@@ -1,4 +1,5 @@
 const ImageFan = (props) => {
+  console.log("props imnage", props);
   const getImgUrl = () => {
     //get base url
     const baseURL = "https://www.create-store.com/img/core/ikh/configurator/fans/images";

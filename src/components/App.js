@@ -54,11 +54,11 @@ const updateBlades = (material) =>  {
           path="/serie/:fanName/motor/:colormotor"
           element={
             <Configurator
-            updateMotor={updateMotor}
+
             updateBlades={updateBlades}
               fan={fan}
               motor={motor}
-              nextPath={`blades/${motor}`}
+              nextPath={`blades/${blades}`}
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"

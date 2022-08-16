@@ -12,6 +12,7 @@ const ListOfMaterials = (props) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
       return (
         <ButtonSelectorType
+        updateMaterial={props.updateMaterial}
           updateMotor={props.updateMotor}
           eachColorButton={eachButton}
         />

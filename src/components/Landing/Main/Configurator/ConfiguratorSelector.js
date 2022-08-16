@@ -8,6 +8,7 @@ const ConfiguratorSelector = (props) => {
       <Steps textSelector={props.textSelector} />
       <ListOfMaterials
         fan={props.fan}
+        updateMaterial={props.updateMaterial}
         updateMotor={props.updateMotor}
         selectedMotor={props.selectedMotor}
         getInfoBubbles={props.getInfoBubbles}

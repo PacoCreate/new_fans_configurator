@@ -20,7 +20,11 @@ const Configurator = (props) => {
   const [selectedMotor, setSelectedMotor] = useState(initImg);
 
 
-
+  const updateMaterial = (material) => {
+    // Cuando ButtonSelectorType ejecute esta función nos pasará el material por parámetros
+    // En esta función guardamos el material en el estado
+    setSelectedMotor(material);
+  };
   return (
     <div>
       <BackButtons />
@@ -38,6 +42,7 @@ const Configurator = (props) => {
           motor={props.motor}
           selectedMotor={selectedMotor}
           nextPath={props.nextPath}
+          updateMaterial={updateMaterial}
           updateMotor={props.updateMotor}
           textSelector={props.textSelector}
           getInfoBubbles={props.getInfoBubbles}

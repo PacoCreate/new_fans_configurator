@@ -1,7 +1,10 @@
 const ButtonSelectorType = (props) => {
   // Cuando la usuaria cambia de material se ejecuta esta función manejadora del evento
   function handleButton(ev) {
-    props.updateMotor(ev.target.getAttribute("data-color-id"))
+    //aqui tendria que hacer un condicional, de si estoy en X paso me guarde una u otra cosas
+    console.log(props, "gjknfred");
+    props.updateMaterial(ev.target.getAttribute("data-color-id"))
+    props.updateMotor(ev.target.getAttribute("data-color-id"));
   }
 
   return (
