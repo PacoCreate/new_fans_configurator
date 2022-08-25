@@ -5,7 +5,7 @@ import ConfiguratorSelector from "./ConfiguratorSelector";
 import ImageFan from "./ImageFan";
 import { useState } from "react";
 // import { useParams } from "react-router-dom";
-
+//renombrar configurator layout
 const Configurator = (props) => {
   // const { colomotor } = useParams();
 
@@ -44,6 +44,7 @@ const Configurator = (props) => {
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
           updateMotor={props.updateMotor}
+          updateBlades={props.updateBlades}
           textSelector={props.textSelector}
           getInfoBubbles={props.getInfoBubbles}
         />

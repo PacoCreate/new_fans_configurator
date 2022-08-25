@@ -55,7 +55,7 @@ const updateBlades = (material) =>  {
           element={
             <Configurator
 
-            updateBlades={updateBlades}
+             updateBlades={updateBlades}
               fan={fan}
               motor={motor}
               nextPath={`blades/${blades}`}
