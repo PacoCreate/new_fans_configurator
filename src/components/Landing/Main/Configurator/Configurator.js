@@ -17,13 +17,13 @@ const Configurator = (props) => {
   let initImg = fanArr[0].motor;
 
   //ESTADOS
-  const [selectedMotor, setSelectedMotor] = useState(initImg);
+  const [materialSelected, setMaterialSelected] = useState(initImg);
 
-
+//La función updateMaterial() recoge el material escogido por la usuaria cuando clicka en una bolita y hace que la foto cambie
   const updateMaterial = (material) => {
     // Cuando ButtonSelectorType ejecute esta función nos pasará el material por parámetros
     // En esta función guardamos el material en el estado
-    setSelectedMotor(material);
+    setMaterialSelected(material);
   };
   return (
     <div>
@@ -35,12 +35,12 @@ const Configurator = (props) => {
         descriptionStep={props.descriptionStep}
       />
       <section className="c-configurator">
-        <ImageFan fan={props.fan} selectedMotor={selectedMotor} />
+        <ImageFan fan={props.fan} materialSelected={materialSelected} motor={props.motor} blades={props.blades} />
         <ConfiguratorSelector
-     
+          numberStep={props.numberStep}
           fan={props.fan}
           motor={props.motor}
-          selectedMotor={selectedMotor}
+          materialSelected={materialSelected}
           nextPath={props.nextPath}
           updateMaterial={updateMaterial}
           updateMotor={props.updateMotor}

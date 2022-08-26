@@ -7,10 +7,12 @@ const ConfiguratorSelector = (props) => {
     <article className="c-configurator__selector">
       <Steps textSelector={props.textSelector} />
       <ListOfMaterials
+        numberStep={props.numberStep}
         fan={props.fan}
         updateMaterial={props.updateMaterial}
         updateMotor={props.updateMotor}
-        selectedMotor={props.selectedMotor}
+        updateBlades={props.updateBlades}
+        materialSelected={props.materialSelected}
         getInfoBubbles={props.getInfoBubbles}
       />
       <NextButton motor={props.motor} nextPath={props.nextPath} />

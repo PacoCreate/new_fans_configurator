@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 const NextButton = (props) => {
-  console.log("props", props);
+
   return (
     <Link to={props.nextPath}
     //to={props.nextPath}

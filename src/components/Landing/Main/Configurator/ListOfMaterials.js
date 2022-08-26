@@ -13,8 +13,10 @@ const ListOfMaterials = (props) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
       return (
         <ButtonSelectorType
+        numberStep={props.numberStep}
         updateMaterial={props.updateMaterial}
           updateMotor={props.updateMotor}
+          updateBlades={props.updateBlades}
           eachColorButton={eachButton}
         />
       );
@@ -22,7 +24,7 @@ const ListOfMaterials = (props) => {
   };
   return (
     <ul className="c-configurator__selector-colors u-list-unstyled">
-      {renderButtons(props.getInfoBubbles(fanArr, props.selectedMotor, props.updateMotor))}
+      {renderButtons(props.getInfoBubbles(fanArr, props.materialSelected, props.updateMotor, props.updateBlades))}
     </ul>
   );
 };

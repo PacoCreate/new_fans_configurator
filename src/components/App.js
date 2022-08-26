@@ -54,20 +54,20 @@ const updateBlades = (material) =>  {
           path="/serie/:fanName/motor/:colormotor"
           element={
             <Configurator
-
-             updateBlades={updateBlades}
               fan={fan}
               motor={motor}
+              blades={blades}
               nextPath={`blades/${blades}`}
               numberStep="3"
               descriptionStep="Elige el color de las aspas"
               textSelector="Colores de aspas"
               getInfoBubbles={getInfoBlades}
+              updateBlades={updateBlades}
             />
           }
         ></Route>
         <Route
-          path="/serie/:fanName/motor/:colormotor/blades"
+          path={`/serie/:fanName/motor/:colormotor/blades/${blades}`}
           element={
             <Configurator
             updateMotor={updateMotor}
