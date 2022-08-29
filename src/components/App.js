@@ -40,6 +40,7 @@ const updateBlades = (material) =>  {
             <Configurator
               fan={fan}
               motor={motor}
+              blades={blades}
               nextPath={`motor/${motor}`}
               numberStep="2"
               descriptionStep="Elige el color de motor"

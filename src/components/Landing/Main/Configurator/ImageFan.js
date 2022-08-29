@@ -1,15 +1,17 @@
-
 const ImageFan = (props) => {
   const getImgUrl = () => {
     //get base url
     const baseURL = "https://www.create-store.com/img/core/ikh/configurator/fans/images";
     //get the name's folder between url
     const folder = "/" + window.location.href.split("/serie/")[1].split("/")[0] + "/";
-    console.log(props);
-    const motorColor=`${props.motor}`
-    const bladesColor=`${props.blades}/fan.jpg`
+    let bladesColor
+    const motorColor = `${props.motor}`;
+    props.blades === "" ?  bladesColor = "" : bladesColor = `/b-${props.blades}`;
+    // let bladesColor = `/b-${props.blades}`;
+
+  
     //url personalizada
-    const imgUrl = `${baseURL}${folder}${motorColor}/fan.jpg`;
+    const imgUrl = `${baseURL}${folder}${motorColor}${bladesColor}/fan.jpg`;
     return <img className="c-configurator__image-picture-img" alt="fan" src={imgUrl} />;
   };
   //Voy a guardar cada paso en un estado y cada eleccion del usuario en otro estado

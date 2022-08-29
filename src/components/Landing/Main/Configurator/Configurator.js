@@ -7,10 +7,6 @@ import { useState } from "react";
 // import { useParams } from "react-router-dom";
 //renombrar configurator layout
 const Configurator = (props) => {
-  // const { colomotor } = useParams();
-
-  // const [stepSelected, setStepSelected] = useState("");
-
   //VARIABLES ¿¿
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
@@ -35,7 +31,7 @@ const Configurator = (props) => {
         descriptionStep={props.descriptionStep}
       />
       <section className="c-configurator">
-        <ImageFan fan={props.fan} materialSelected={materialSelected} motor={props.motor} blades={props.blades} />
+        <ImageFan fan={props.fan} materialSelected={materialSelected} numberStep={props.numberStep} motor={props.motor} blades={props.blades} />
         <ConfiguratorSelector
           numberStep={props.numberStep}
           fan={props.fan}
