@@ -3,7 +3,7 @@ import ButtonSelectorType from "./ButtonSelector/ButtonSelectorType";
 const ListOfMaterials = (props) => {
   const nameFolder = window.location.href.split("/serie/")[1].split("/")[0];
   const fanArr = require(`/src/data/series/${nameFolder}.json`).fans;
- 
+
   const uniqueSelectors = (infoAboutButtons) => {
     let result = [...new Set(infoAboutButtons)];
     return result;
@@ -11,10 +11,13 @@ const ListOfMaterials = (props) => {
 
   const renderButtons = (infoAboutButtons) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
+      console.log("props.materialSelected", props.materialSelected);
+      console.log("props.updateMotord", props.updateMotor);
+      console.log("props.updateBlades", props.updateBlades);
       return (
         <ButtonSelectorType
-        numberStep={props.numberStep}
-        updateMaterial={props.updateMaterial}
+          numberStep={props.numberStep}
+          updateMaterial={props.updateMaterial}
           updateMotor={props.updateMotor}
           updateBlades={props.updateBlades}
           eachColorButton={eachButton}
