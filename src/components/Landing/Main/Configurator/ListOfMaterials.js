@@ -11,9 +11,6 @@ const ListOfMaterials = (props) => {
 
   const renderButtons = (infoAboutButtons) => {
     return uniqueSelectors(infoAboutButtons).map((eachButton) => {
-      console.log("props.materialSelected", props.materialSelected);
-      console.log("props.updateMotord", props.updateMotor);
-      console.log("props.updateBlades", props.updateBlades);
       return (
         <ButtonSelectorType
           numberStep={props.numberStep}
