@@ -11,27 +11,17 @@ const getInfoMotor = (fanArr) => {
 //  colores de aspas
 const getInfoBlades = (fanArr, chosenMotor) => {
   let availableBlades = [];
-
-  //filtro el array por medio del estado, que me devuelve el color seleccionado por el usuario del motor
-  let newArr = [];
-  console.log("fanArr", fanArr);
-  fanArr.map((cadaFan) => {
-    if (cadaFan.active !== false) {
-      newArr.push(cadaFan.active);
-    }
-  });
-  console.log("newArr", newArr);
-  const arrColorBlades = fanArr
+    fanArr
     .filter((fan) => fan.motor === chosenMotor)
     .map((fanBlades) => {
       if (fanBlades.active !== false) {
-        return fanBlades.blades;
-      }
+        return  availableBlades.push(fanBlades.blades);
+      } 
     });
-  availableBlades.push(arrColorBlades);
 
-  console.log("availableBlades", availableBlades);
-  return availableBlades[0];
+
+
+  return availableBlades;
 };
 
 export { getInfoBlades, getInfoMotor };
